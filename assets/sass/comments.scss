@@ -1,0 +1,164 @@
+@import "partials/mixins";
+
+.comments-area{
+	margin-top: 50px;
+
+	ol{
+		@include ul-properties();
+
+		li{
+			padding: 40px;
+			border-bottom: 1px solid #e9eaea;
+
+			@include media-q(s-tablet){
+				> div{
+					display: flex;
+					flex-direction: column;
+					row-gap: 30px;
+				}
+			}
+
+			@include media-q(phone){
+				padding: 10px;
+			}
+		}
+
+		ol{
+			margin-left: 5%;
+		}
+	}
+
+	p{
+		margin: 0;
+	}
+
+	.comment-reply-title{
+		a{
+			color: inherit;
+			margin-right: 15px;
+		}
+
+		small{
+    		font-size: 1rem;
+    		text-transform: capitalize;
+    		display: inline-block;
+		}
+	}
+
+	.container{
+		padding: 0;
+	}
+
+	.comments-wrapper{
+		div.avatar{
+			display: inline-block;
+			float: left;
+
+			@include media-q(s-tablet, min){
+				margin-right: 20px; 
+			}
+
+			img{border-radius: 50%;}
+		}
+
+		.comment-meta{
+			display: flex;
+			justify-content: space-between;
+
+			@include media-q(phone){
+				flex-direction: column;
+			}
+
+			a.comment-reply-link{
+				@include button-properties;
+				font-size: 1rem;
+				font-weight: $font-weight-light;
+				padding: 10px 18px 7px;
+				min-width: initial;
+
+				@include media-q(phone){
+					margin-top: 7px;
+				}
+			}
+		}
+
+		.comment-block{
+			display: flex;
+			flex-direction: column;
+		}
+
+		p.date{
+    		font-size: 14px;
+    		color: #929496;
+    		font-weight: bold;
+		}
+
+		.comment-text{
+			margin-top: 15px;
+		}
+
+		.comment-form-wrapper{
+			background-color: #4e83ff;
+			color: #fff;
+			padding: 50px 40px;
+			margin: 60px 0;
+
+			@include media-q(phone){
+				padding: 35px 25px;
+			}
+
+			form{
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 16px;
+
+				label{ display: none; }
+
+				p.logged-in-as a{
+					color: #fff;
+				}
+
+				input:not([type="submit"]):not([type="checkbox"]), textarea{
+					width: 100%;
+					@include input-field;
+				}
+
+				input[type="submit"]{
+					@include button-properties;
+					-webkit-appearance: button;
+				}
+
+				.comment-notes, .comment-form-comment, .comment-form-cookies-consent, .form-submit, .logged-in-as{
+  					grid-column-start: 1;
+  					grid-column-end: 4;
+				}
+
+				.comment-form-cookies-consent{
+					display: flex;
+
+					input{
+						position: relative;
+						top: 4px;
+    					margin-right: 10px;
+    					width: 36px;
+    					border-radius: 0px;
+					}
+
+					label{
+						display: inline-block;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@include media-q(s-tablet){
+	.comments-area .comments-wrapper .comment-form-wrapper form{
+		.comment-form-author, .comment-form-email, .comment-form-url{
+  			grid-column-start: 1;
+  			grid-column-end: 4;
+		}
+	}
+}

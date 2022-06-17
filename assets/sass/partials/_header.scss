@@ -1,0 +1,400 @@
+#hello-bar{
+	background-color: $c-brand-primary;
+	padding: 10px 0;
+	font-size: map-get($font-size-map, xs);
+	font-weight: $font-weight-semi-bold;
+
+	@include media-q(s-laptop){
+		display: none;
+	}
+
+	ul{
+		@include ul-properties;
+		@include flex($horizontal-align: flex-end);
+
+		li + li{
+			margin-left: 35px;
+		}
+
+		i{
+			margin-right: 5px;
+		}
+
+		a{
+			color: $c-white;
+
+			&:hover{
+				color: $c-yellow;
+			}
+		}
+	}
+}
+
+#site-wrapper.single-post #masthead,
+#site-wrapper.error404 #masthead,
+#site-wrapper.search #masthead{
+	position: initial;
+	background-color: #1C283F;
+}
+
+#masthead{
+	background-color: transparent;
+	padding: 28px 0;
+	font-size: map-get($font-size-map, sm);
+	position: absolute;
+	right: 0; left: 0;
+	z-index: 100;
+	min-height: 91px;
+
+	@include media-q(s-laptop, min){
+		padding: 45px 0;
+	}
+
+	.container{
+		@include flex(center, space-between, nowrap);
+		position: relative;
+	}
+
+	a.logo img{
+		height: initial;
+		margin-right: 20px
+	}
+
+	ul{
+		@include ul-properties;
+
+		a{
+			color: $c-white;
+		}
+	}
+
+	.menu-wrapper{
+		display: flex;
+		align-items: center;
+
+		@include media-q(s-laptop){
+			display: none;
+		}
+	}
+
+	.magnifier{
+        border: 1px solid $c-yellow;
+        background-color: #425477;
+		width: 45px;
+    	height: 45px;
+    	padding: 5px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	margin-left: 20px;
+    	border-radius: 4px;
+    	cursor: pointer;
+
+    	@include media-q(s-laptop){
+    		margin-left: 13px;
+    	}
+
+		@include media-q(l-phone){
+			margin-left: 10px;
+		}
+
+		@include media-q(phone){
+			width: 30px;
+			height: 30px;
+			margin-left: 5px;
+		}
+
+    	.fa-search{
+    		color: #fff;
+    		font-size: 18px;
+
+    		@include media-q(phone){
+    			font-size: 13px;
+    		}
+    	}
+    	
+    	&:hover .fa-search{
+    		color: $c-yellow;
+    	}
+	}
+
+	.main-navigation{
+
+		ul#primary-menu{
+			display: flex;
+
+			> li{
+				position: relative;
+	
+				&+li{margin-left: 30px;}
+	
+				&.current-menu-item:after{
+					content: url('../images/nav-arrow.svg');
+					position: absolute;
+					left: calc(50% - 11.15px);
+					top: 25px;
+					width: 22px;
+					height: 10px;
+				}
+	
+				> a:hover{
+					color: $c-yellow;
+				}
+
+				&.menu-item-has-children{
+
+					&:before{
+						content: "";
+						position: absolute;
+						right: 0; left: 0; bottom: -19px;
+						height: 20px;
+					}
+
+					> ul.sub-menu{
+						position: absolute;
+						top: 40px;
+						min-width: 300px;
+						width: max-content;
+						background-color: #25334d;
+						border: 1px solid $c-yellow;
+						padding: 6px;
+						z-index: 1;
+
+						transition: $transition;
+    					max-height: 0;
+    					overflow: hidden;
+    					visibility: hidden;
+
+						&:before{
+							content: "";
+							position: absolute;
+							top: -11px; left: 35px;
+							background-color: #25334d;
+							border-top: 1px solid $c-yellow;
+							border-left: 1px solid $c-yellow;
+							width: 20px;
+							height: 20px;
+							transform: rotate(45deg);
+							z-index: -1;
+						}
+
+						> li > a{
+							padding: 12px;
+							display: block;
+
+							&:hover{
+								background-color: $c-yellow;
+								color: #25334d;
+							}
+						}
+					}
+
+					&:hover > ul.sub-menu{
+						max-height: 1000px;
+						overflow: visible;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	.mobile-navigation{
+		display: flex;
+
+		@include media-q(s-laptop, min){
+			display: none;
+		}
+
+		@include media-q(phone){
+			margin-left: 15px;
+		}
+
+		> ul{
+			display: flex;
+		}
+
+		li{
+			& + li{
+				margin-left: 13px;
+
+				@include media-q(l-phone){
+					margin-left: 10px;
+				}
+			}
+
+
+			@include media-q(phone){
+				height: 30px; width: 30px;
+				& + li { margin-left: 5px; }
+			}
+		}
+	}
+}
+
+#ham-icon-wrap{
+	width: 45px;
+	height: 45px;
+	margin-left: 25px;
+	@include flex (center, center);
+	cursor: pointer;
+	background-color: $c-yellow;
+	border-radius: 3px;
+
+	@include media-q(l-phone){
+		margin-left: 10px;
+	}
+
+	@include media-q(phone){
+		width: 30px;
+		height: 30px;
+		margin-left: 5px;
+	}
+
+	.ham-icon{
+
+	    .lines{
+			width: 25px;
+			height: 2px;
+			background-color: $c-main-content;
+			transition: all .2s ease-in-out;
+
+			@include media-q(phone){
+				width: 20px;
+			}
+
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 2px;
+				background-color: $c-main-content;
+
+				@include media-q(phone){
+					width: 20px;
+				}
+			}
+
+			&:before{
+				transform: translateY(-5px);
+			}
+
+			&:after{
+				transform: translateY(5px);
+			}
+	    }
+
+	    &.open{
+	    	.lines{
+	    		transform: translateX(0px);
+	    		background: transparent;
+
+	    		&:before{
+	    			transform: rotate(45deg) translate(0);
+	    		}
+
+	    		&:after{
+	    			transform: rotate(-45deg) translate(0);
+	    		}
+	    	}
+	    }
+	}
+}
+
+#overlay-menu{
+	background-color: #25334d;
+	border: 1px solid $c-yellow;
+	position: absolute;
+	right: 0; left: 0;
+	top: 106px;
+	z-index: 100;
+	font-size: map-get($font-size-map, sm);
+	transition: all 300ms ease-in-out;
+	max-width: 98%;
+	margin: 0 auto;
+	height: 0; 
+	visibility: hidden;
+	overflow: hidden;
+
+	@include media-q (s-laptop, min){
+		display: none !important;
+	}
+
+	@include media-q(phone){
+		top: 91px;
+	}
+
+	nav{
+		padding: 12px;
+
+		ul{
+			@include ul-properties();
+			text-transform: uppercase;
+
+			li{
+				color: $c-white;
+
+				&:hover{
+					color: $c-yellow;
+				}
+
+				&.current-menu-item{
+					color: #25334d;
+				}
+
+				&.current-menu-item > a{
+					background-color: $c-yellow;
+				}
+				
+				a{
+					color: inherit;
+					padding: 12px;
+					display: block;
+				}
+			}
+
+			li.menu-item-has-children{
+				position: relative;
+
+				&:after{
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					content: "\f067";
+					position: absolute;
+					right: 0;
+    				top: 0;
+    				width: 46px;
+    				height: 46px;
+    				display: flex;
+    				justify-content: center;
+    				align-items: center;
+    				color: #fff;
+    				z-index: 1;
+    				cursor: pointer;
+				}
+
+				&:hover:after{
+					color: $c-yellow;
+				}
+
+				&.current-menu-item{
+					&:after{color: #25334d;}
+					&:hover:after{color: #25334d;}
+				}
+
+				&.dropdown:after{
+					content: "\f068";
+				}
+
+			}
+
+			&.sub-menu{
+				height: 0; 
+				visibility: hidden;
+				overflow: hidden;
+				padding-left: 20px;
+				transition: $transition;
+			}
+		}
+	}
+}

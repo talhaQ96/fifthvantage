@@ -1,0 +1,51 @@
+/*File For Generic Content Styling*/
+
+.generic-content{
+
+	> *:not(:last-child),
+	.wp-block-column > *:not(:last-child){ margin-bottom: 35px; }
+
+	ul:not(.blocks-gallery-grid), ol{
+		margin-top: 35px;
+		margin-bottom: 35px;
+		padding-left: 40px;
+	
+		li{
+			& > a{
+				font-weight: $font-weight-bold;
+				color: #4E83FF; 
+			}
+		}
+	}
+	
+	ul{list-style-type: disc;}
+	
+	ol{list-style-type: decimal;}
+
+	blockquote{
+		border-left: 4px solid #4E83FF;
+		padding-left: 30px;
+
+		p{
+				font-size: map-get($font-size-map, lg);
+				line-height: 30px;
+				margin-bottom: 10px
+		}
+	}
+
+	.wp-block-pullquote{
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		&.is-style-solid-color p{
+			line-height: 42px;
+			margin-bottom: 15px;
+		}
+	}
+
+	table td, table th{
+		padding: 0.5em;
+    	border: 1px solid #767676;
+    	word-break: break-all;
+	}
+}

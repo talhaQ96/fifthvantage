@@ -1,0 +1,155 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.comments-area {
+  margin-top: 50px; }
+  .comments-area ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .comments-area ol li {
+      padding: 40px;
+      border-bottom: 1px solid #e9eaea; }
+      @media (max-width: 767px) {
+        .comments-area ol li > div {
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px; } }
+      @media (max-width: 479px) {
+        .comments-area ol li {
+          padding: 10px; } }
+    .comments-area ol ol {
+      margin-left: 5%; }
+  .comments-area p {
+    margin: 0; }
+  .comments-area .comment-reply-title a {
+    color: inherit;
+    margin-right: 15px; }
+  .comments-area .comment-reply-title small {
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: inline-block; }
+  .comments-area .container {
+    padding: 0; }
+  .comments-area .comments-wrapper div.avatar {
+    display: inline-block;
+    float: left; }
+    @media (min-width: 768px) {
+      .comments-area .comments-wrapper div.avatar {
+        margin-right: 20px; } }
+    .comments-area .comments-wrapper div.avatar img {
+      border-radius: 50%; }
+  .comments-area .comments-wrapper .comment-meta {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 479px) {
+      .comments-area .comments-wrapper .comment-meta {
+        flex-direction: column; } }
+    .comments-area .comments-wrapper .comment-meta a.comment-reply-link {
+      font-weight: 500;
+      font-family: "Montserrat";
+      font-size: 16px;
+      line-height: 22px;
+      background-color: #FEBE0F;
+      color: #1C283F;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 13px 34px 10px;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 300ms ease-in-out;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 10px 18px 7px;
+      min-width: initial; }
+      .comments-area .comments-wrapper .comment-meta a.comment-reply-link:hover {
+        background-color: #0DDEFA; }
+      @media (max-width: 479px) {
+        .comments-area .comments-wrapper .comment-meta a.comment-reply-link {
+          margin-top: 7px; } }
+  .comments-area .comments-wrapper .comment-block {
+    display: flex;
+    flex-direction: column; }
+  .comments-area .comments-wrapper p.date {
+    font-size: 14px;
+    color: #929496;
+    font-weight: bold; }
+  .comments-area .comments-wrapper .comment-text {
+    margin-top: 15px; }
+  .comments-area .comments-wrapper .comment-form-wrapper {
+    background-color: #4e83ff;
+    color: #fff;
+    padding: 50px 40px;
+    margin: 60px 0; }
+    @media (max-width: 479px) {
+      .comments-area .comments-wrapper .comment-form-wrapper {
+        padding: 35px 25px; } }
+    .comments-area .comments-wrapper .comment-form-wrapper form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px; }
+      .comments-area .comments-wrapper .comment-form-wrapper form label {
+        display: none; }
+      .comments-area .comments-wrapper .comment-form-wrapper form p.logged-in-as a {
+        color: #fff; }
+      .comments-area .comments-wrapper .comment-form-wrapper form input:not([type="submit"]):not([type="checkbox"]), .comments-area .comments-wrapper .comment-form-wrapper form textarea {
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 10px 20px;
+        outline: none;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 200; }
+        .comments-area .comments-wrapper .comment-form-wrapper form input:not([type="submit"]):not([type="checkbox"])::placeholder, .comments-area .comments-wrapper .comment-form-wrapper form textarea::placeholder {
+          font-size: 16px;
+          line-height: 26px;
+          font-family: "Open Sans"; }
+      .comments-area .comments-wrapper .comment-form-wrapper form input[type="submit"] {
+        font-weight: 500;
+        font-family: "Montserrat";
+        font-size: 16px;
+        line-height: 22px;
+        background-color: #FEBE0F;
+        color: #1C283F;
+        border-radius: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 13px 34px 10px;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 300ms ease-in-out;
+        outline: none;
+        border: none;
+        -webkit-appearance: button; }
+        .comments-area .comments-wrapper .comment-form-wrapper form input[type="submit"]:hover {
+          background-color: #0DDEFA; }
+      .comments-area .comments-wrapper .comment-form-wrapper form .comment-notes, .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-comment, .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-cookies-consent, .comments-area .comments-wrapper .comment-form-wrapper form .form-submit, .comments-area .comments-wrapper .comment-form-wrapper form .logged-in-as {
+        grid-column-start: 1;
+        grid-column-end: 4; }
+      .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-cookies-consent {
+        display: flex; }
+        .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-cookies-consent input {
+          position: relative;
+          top: 4px;
+          margin-right: 10px;
+          width: 36px;
+          border-radius: 0px; }
+        .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-cookies-consent label {
+          display: inline-block; }
+
+@media (max-width: 767px) {
+  .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-author, .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-email, .comments-area .comments-wrapper .comment-form-wrapper form .comment-form-url {
+    grid-column-start: 1;
+    grid-column-end: 4; } }
+
+/*# sourceMappingURL=comments.css.map */

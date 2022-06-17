@@ -1,0 +1,226 @@
+@import '../partials/mixins';
+
+.acf-block__bio{
+	color: $c-white;
+	
+	> div{
+		@include flex($horizontal-align: space-between, $wrap: wrap);
+
+		@include media-q(s-laptop){
+			justify-content: center;
+			padding-top: 10px;
+		}
+	}
+
+	h2.title span{
+	    background-color: $c-brand-primary;
+	    background-image: linear-gradient(180deg, #4A85FE, #0CDFFA);
+	    background-size: 100%;
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+	}
+
+	ul{
+	   	@include ul-properties;
+	}
+
+	.flex-item-1{
+		flex-basis: 290px;
+
+		@include media-q(s-laptop){
+			flex-basis: 47%;
+			order: 1;
+		}
+
+		@include media-q(s-tablet){
+			flex-basis: 40%;
+		}
+
+		@include media-q(phone){
+			flex-basis: 100%;
+		}
+	}
+
+	.flex-item-2{
+		flex-basis: 503px;
+
+		@include media-q(s-laptop){
+			flex-basis: 80%;
+			order: 3;
+		}
+
+		@include media-q(s-tablet){
+			flex-basis: 100%;
+		}
+	}
+
+	.flex-item-3{
+		flex-basis: 222px;
+
+		@include media-q(s-laptop){
+			flex-basis: 47%;
+			order: 2;
+		}
+
+		@include media-q(s-tablet){
+			flex-basis: 36%;
+		}
+
+		@include media-q(phone){
+			flex-basis: 100%;
+		}
+	}
+
+	.photo-wrap{
+
+		figure{
+			position: relative;
+			margin: 0;
+			height: fit-content;
+			width: fit-content;
+
+			@include media-q(phone){
+				margin: 0 auto;
+			}
+
+			&:after{
+    			content: "";
+    			position: absolute;
+    			bottom: -11px;
+    			left: -11px;
+    			width: 104px;
+    			height: 85%;
+    			background: transparent linear-gradient(
+				180deg, #4E81FF 0%, #0AE3FA 100%) 0% 0% no-repeat padding-box;
+    			z-index: -1;
+
+    			@include media-q(l-phone){
+    				bottom: -8px;
+    				left: -8px;
+    			}
+			}
+
+			img{
+				@include media-q(s-laptop){
+					height: auto !important;
+				}
+			}
+		}
+
+
+		@include media-q(phone, min){
+			display: flex;
+			justify-content: flex-end;
+
+			@include media-q(s-laptop){
+				margin-right: 40px;
+			}
+		}
+	}
+
+	.about-text{	
+	    p + p{
+	    	margin-top: 25px;
+	    }
+	
+	    ul{
+	    	margin-top: 25px;
+	    	display: flex;
+	
+	    	li{
+	    		width: 25px;
+	    		height: 25px;
+	    		overflow: hidden;
+	
+	    		& + li{
+	    			margin-left: 10px;
+	    		}
+	    	}
+
+	    	@include media-q(s-laptop){
+	    		justify-content: center;
+	    	}
+	    }
+
+		#readmore{
+			color: $c-yellow;
+			font-size: map-get($font-size-map, xs);
+			font-weight: $font-weight-semi-bold;
+			margin-top: 15px;
+		}
+		
+		
+		#readmore-text{
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+			transition: $transition;
+		
+			p{ margin-top: 25px; }
+		}
+
+
+	    @include media-q(s-laptop){
+	    	text-align: center;
+	    	margin-top: 35px;
+
+	    	ul.d-s_laptop-none{
+	    		display: none;
+	    	}
+	    }
+	}
+
+	.bio-slider{
+		display: flex;
+		align-items: center;
+
+		@include media-q(phone){
+			justify-content: center;
+			margin-top: 30px;
+		}
+
+		img{
+			margin: auto;
+			height: auto;
+		}
+
+		> ul:not(.slick-initialized) li:not(:first-child){
+			display: none;
+		}
+
+		ul.slick-slider{
+			max-width: 222px;
+
+			@include media-q(l-phone){
+				max-width: 163px;
+			}
+		}
+
+		ul.slick-dots{
+			display: flex;
+			justify-content: center;
+			margin-top: 35px;
+
+			> li{
+				transform: rotate(45deg);
+				margin-left: 8px;
+				line-height: 0;
+
+				button{
+					width: 8px;
+					height: 8px;
+					background-color: $c-white;
+					border: 0;
+    				outline: none;
+    				font-size: 0;
+    				padding: 0;
+    				cursor: pointer;
+				}
+
+				&.slick-active button{
+					background-color: $c-yellow;
+				}	
+			}
+		}
+	}
+}

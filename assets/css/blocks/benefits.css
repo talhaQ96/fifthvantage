@@ -1,0 +1,53 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.acf-block__benefits {
+  padding-top: 32px; }
+  @media (min-width: 768px) {
+    .acf-block__benefits {
+      padding-top: 22px; } }
+@media (max-width: 767px) and (min-width: 576px) {
+  .acf-block__benefits .benefits-slider:not(.slick-initialized) {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .acf-block__benefits .benefits-slider:not(.slick-initialized) .benefit:nth-child(n+3) {
+      display: none; } }
+
+  @media (max-width: 575px) {
+    .acf-block__benefits .benefits-slider:not(.slick-initialized) .benefit:not(:first-child) {
+      display: none; } }
+  .acf-block__benefits .benefits-slider {
+    text-align: center; }
+    .acf-block__benefits .benefits-slider .benefit:nth-child(7):last-child {
+      grid-column-start: 2; }
+    .acf-block__benefits .benefits-slider .benefit > div {
+      max-width: 230px;
+      margin: 0 auto; }
+    .acf-block__benefits .benefits-slider .icon-wrapper {
+      min-height: 92px; }
+      .acf-block__benefits .benefits-slider .icon-wrapper img {
+        max-height: 70px;
+        margin: 0 auto; }
+    .acf-block__benefits .benefits-slider p {
+      color: #FFF; }
+    .acf-block__benefits .benefits-slider svg {
+      top: calc(50% - 36px); }
+    .acf-block__benefits .benefits-slider .slick-slide {
+      padding: 0 10px; }
+    @media (min-width: 768px) {
+      .acf-block__benefits .benefits-slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 45px;
+        justify-items: center; } }
+    @media (min-width: 1200px) {
+      .acf-block__benefits .benefits-slider {
+        column-gap: 180px; } }
+
+/*# sourceMappingURL=benefits.css.map */

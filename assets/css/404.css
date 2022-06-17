@@ -1,0 +1,38 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.not-found {
+  text-align: center; }
+  .not-found .wrapper {
+    max-width: 576px;
+    margin: auto; }
+    .not-found .wrapper h1 {
+      font-weight: bold; }
+  .not-found .ct-button {
+    margin-top: 35px; }
+  .not-found form {
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    background-color: #f9fafa;
+    max-width: 320px;
+    margin: 35px auto 0; }
+    .not-found form input {
+      width: 100%;
+      padding: 10px 22px;
+      border: 0;
+      background-color: transparent;
+      font-size: 1rem;
+      font-family: "Open Sans";
+      font-weight: 300; }
+      .not-found form input:focus {
+        outline: none; }
+    .not-found form button {
+      display: none; }
+
+/*# sourceMappingURL=404.css.map */

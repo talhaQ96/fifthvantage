@@ -1,0 +1,81 @@
+@import '../partials/mixins';
+
+.acf-block__cards-slider{
+	@include media-q(s-tablet, min){
+		padding-top: 25px;
+	}
+
+	.cards-slider{
+		position: relative;
+
+		// Styles when slick slider isn't initialized
+
+		&:not(.slick-initialized){
+			display: grid;
+			gap: 50px;
+
+			@include media-q(l-phone){
+				> div:not(:first-child){
+					display: none;
+				}
+			}
+
+			@include media-q(l-phone, min){
+				@include media-q(tablet){
+					grid-template-columns: repeat(2, 1fr);
+
+					> div:nth-child(n+3){
+						display: none;
+					}
+				}
+			}
+
+			@include media-q(tablet, min){
+				@include media-q(s-laptop){
+					grid-template-columns: repeat(3, 1fr);
+
+					> div:nth-child(n+4){
+						display: none;
+					}
+				}
+			}
+
+			@include media-q(s-laptop, min){
+				grid-template-columns: repeat(4, 1fr);
+
+				> div:nth-child(n+5){
+					display: none;
+				}
+			}
+		}
+
+		svg{
+			top: 30%;
+		}
+	}
+
+	.slick-slide{
+		padding: 0 25px;
+	}
+
+	.icon-wrapper{
+		min-height: 167px;
+
+		img{
+			max-height: 137px;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	.content-wrapper{
+		text-align: center;
+
+		@include media-q(l-phone){
+			@include media-q(phone, min){
+				max-width: 255px;
+				margin: auto;
+			}
+		}
+	}
+}

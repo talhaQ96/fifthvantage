@@ -1,0 +1,47 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.acf-block__icons-grid ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 30px; }
+  @media (max-width: 991px) {
+    .acf-block__icons-grid ul {
+      gap: 25px; } }
+  @media (min-width: 375px) {
+    .acf-block__icons-grid ul {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 576px) {
+    .acf-block__icons-grid ul {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 992px) {
+    .acf-block__icons-grid ul {
+      grid-template-columns: repeat(5, 1fr); } }
+  .acf-block__icons-grid ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    overflow: hidden; }
+    @media (min-width: 1200px) {
+      .acf-block__icons-grid ul li {
+        min-width: 207px; } }
+    .acf-block__icons-grid ul li img {
+      display: block;
+      margin: auto; }
+
+/*# sourceMappingURL=icons-grid.css.map */

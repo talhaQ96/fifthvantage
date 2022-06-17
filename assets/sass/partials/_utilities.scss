@@ -1,0 +1,134 @@
+/**
+ * Display Utilities
+ * ----------------------
+ */
+
+.d-flex{
+	display: flex;
+}
+
+.d-block{
+	display: block;
+}
+
+.d-none{
+	display: none;
+}
+
+.d-s_laptop-none{
+	@include media-q(s-laptop){
+		display: none;
+	}
+}
+
+.d-s_laptop-block{
+	@include media-q(s-laptop){
+		display: block;
+	}
+}
+
+.d-tablet-none{
+	@include media-q(tablet){
+		display: none;
+	}
+}
+
+.d-tablet-block{
+	@include media-q(tablet){
+		display: block;
+	}
+}
+
+.d-s_tablet-block{
+	@include media-q(s-tablet){
+		display: block;
+	}
+}
+
+.d-s_tablet-none{
+	@include media-q(s-tablet){
+		display: none;
+	}
+}
+
+
+/**
+ * Spacing Utilities - Paddings
+ * ----------------------
+ */
+
+.has-padding,
+.has-padding.has-background{
+	padding-top: 70px;
+	padding-bottom: 35px;
+
+	@include media-q(s-tablet){
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+}
+
+.has-padding-rev,
+.has-padding-rev.has-background{
+	padding-top: 35px;
+	padding-bottom: 70px;
+
+	@include media-q(s-tablet){
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+}
+
+.has-padding-eq,
+.has-padding-eq.has-background{
+	padding: 70px 0;	
+
+	@include media-q(s-tablet){
+		padding: 40px 0;
+	}
+}
+.has-padding-eq-sm,
+.has-padding-eq-sm.has-background{
+	padding: 35px 0;	
+
+	@include media-q(s-tablet){
+		padding: 30px 0;
+	}
+}
+
+.has-padding-top,
+.has-padding-top.has-background{
+	padding-top: 70px;
+
+	@include media-q(s-tablet){
+		padding-top: 40px;
+	}
+}
+
+
+.has-padding-bottom,
+.has-padding-bottom.has-background{
+	padding-bottom: 70px;
+
+	@include media-q(s-tablet){
+		padding-bottom: 40px;
+	}
+}
+
+/**
+ * Spacing Utilities - Margins
+ * --------------------------------
+ */
+
+ .no-margin{
+ 	margin: 0;
+ }
+
+/**
+ * Text Alignment Utilities
+ * -----------------------------
+ */
+
+ .text-center{
+ 	text-align: center;
+ }

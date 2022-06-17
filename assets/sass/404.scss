@@ -1,0 +1,44 @@
+@import 'partials/mixins';
+
+.not-found{
+	text-align: center;
+
+	.wrapper{
+		max-width: 576px;
+		margin: auto;
+
+		h1{
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.ct-button{
+		margin-top: 35px;
+	}
+
+	form {
+	    border: 1px solid #d8d8d8;
+	    border-radius: 4px;
+	    background-color: #f9fafa;
+	    max-width: 320px;
+	    margin: 35px auto 0;
+	
+	    input{
+			width: 100%;
+	    	padding: 10px 22px;
+			border: 0;
+	    	background-color: transparent;
+	    	font-size: 1rem;
+			font-family: $font-main;
+			font-weight: $font-weight-light;
+	
+			&:focus{
+				outline: none;
+			}
+	    }
+	
+	    button{
+	    	display: none;
+	    }
+	}
+}

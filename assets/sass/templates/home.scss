@@ -1,0 +1,250 @@
+@import '../partials/mixins';
+
+/**
+ * HomePage Banner
+ * --------------------
+ */
+
+.home-banner{
+    background-color: $c-main-content;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include media-q(phone, min){
+        min-height: 647px;
+
+        @include media-q(s-tablet){
+            min-height: 570px;
+        }
+    }
+
+    @include media-q(tablet){
+        padding-top: 130px;
+        margin-bottom: 20px;
+    }
+
+    @include media-q(phone){
+        padding-top: 100px;
+    }
+
+    &:after{
+        content: "";
+        height: 30px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -30px;
+        background-color: inherit;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+        @include media-q(tablet){
+            height: 20px;
+            bottom: -19px;
+        }
+    }
+
+    .container{
+        height: 100%;
+        max-width: 922px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .particles{
+        overflow: hidden;
+        position: absolute;
+        top: 0; bottom: 0;
+        right: 0; left: 0;
+    }
+
+    h1.title{
+        font-size: 30px;
+        line-height: 45px;
+        color: $c-white;
+        margin-bottom: 65px;
+
+        @include media-q(s-tablet){
+            font-size: 24px;
+            line-height: 40px;
+            margin-bottom: 55px;
+        }
+
+        @include media-q(phone){
+            font-size: 20px;
+            line-height: 36px;
+            margin-bottom: 35px;
+        }
+
+        span{
+            font-weight: $font-weight-semi-bold;
+            background-color: $c-brand-primary;
+            background-image: linear-gradient(180deg, #4A85FE 0%, #0CDFFA 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-box-decoration-break: clone;
+        }
+    }
+
+    p{
+        color: $c-white;
+        margin-bottom:  50px;
+        font-size: 22px;
+        line-height: 32px;
+
+        @include media-q(s-tablet){
+            font-size: 19px;
+            line-height: 29px;
+        }
+
+        @include media-q(phone){
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 30px;
+        }
+
+        span{
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    a.ct-button{
+        padding: 17px 24px 14px;
+
+        @include media-q(phone){
+           padding: 17px 10px 14px;
+        }
+    }
+}
+
+/**
+ * Growth Section
+ * --------------------
+ */
+
+.section-growth{
+
+    @include media-q(s-tablet){
+        @include media-q(376px, min){
+            .container{
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    }
+
+    .wp-block-columns{
+        @include media-q(s-tablet, min){
+            padding-top: 35px;
+        }
+
+        > .wp-block-column{
+
+            @include media-q(s-tablet, min){
+                flex-basis: 0 !important;
+                flex-grow: 1 !important;
+
+                & + .wp-block-column{
+                    margin-left: 2em;
+                }
+            }
+
+            @include media-q(s-tablet){
+                flex-basis: 100% !important;
+            }
+
+        }
+
+        @include media-q(s-tablet){
+            > .wp-block-column:nth-child(2){
+                order: 1;
+            }
+
+            > .wp-block-column:first-child{
+                order: 2;
+            }
+
+            > .wp-block-column:last-child{
+                order: 3;
+                margin-top: 20px;
+            }
+        }
+    }   
+     
+    ul{
+        @include ul-properties;
+        margin-left: 25px;
+
+        @include media-q(tablet, min){
+            font-size: 20px;
+        }
+
+        li{
+            position: relative;
+
+            &:before{
+                content: "";
+                position: absolute;
+                left: -25px;
+                top: 10px;
+                width: 9px;
+                height: 9px;
+                background-color: $c-yellow;
+                transform: rotate(45deg)
+            }
+
+            & + li {
+                margin-top: 35px;
+
+                @include media-q(s-tablet){
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    img{
+        margin-right: auto;
+        margin-left: auto;
+
+        @include media-q(s-tablet){
+            width: 107px;
+            height: 93px;
+        }
+    }
+}
+
+/**
+ * Biography Section
+ * --------------------
+ */
+
+.section-bio{
+    position: relative;
+
+    .container{
+        z-index: 1;
+    }
+
+    &:before{
+        content: "";
+        background-image: url(../../images/circuit-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        max-width: 800px;
+
+        @include media-q(s-tablet){
+            background-image: url(../../images/circuit-bg-mobile.svg);
+            max-width: 480px;
+            height: 480px;
+            top: initial;
+            bottom: -65px;
+        }
+    }
+}

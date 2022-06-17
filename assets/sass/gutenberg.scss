@@ -1,0 +1,70 @@
+@import "partials/variables";
+
+.block-editor-block-list__layout {
+	@import 'core';
+}
+
+.block-editor-block-list__layout .align-full,
+.block-editor-block-list__layout .alignfull,
+.block-editor-block-list__layout .breakout {
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+
+@media (min-width: 851px) {
+	.image-text-1 figure {
+		width: 60% !important;
+		margin-right: -71px !important;
+		margin-bottom: 43px !important;
+	}
+}
+
+h1, .h1 {
+	font-family: $font-alt;
+}
+h2, .h2 {
+	font-family: $font-alt;
+}
+h3, .h3 {
+	font-family: $font-alt;
+}
+h4, .h4 {
+	font-family: $font-alt;
+}
+h5, .h5 {
+	font-family: $font-alt;
+}
+h6, .h6 {
+	font-family: $font-alt;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition:  $transition;
+		-moz-transition: $transition;
+		-ms-transition:  $transition;
+		 -o-transition:  $transition;
+			transition:  $transition;
+	img {
+		border-style: none;
+	}
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	color: #1A1919;
+	line-height: 1.4;
+	font-family: $font-main;
+	font-weight: $font-weight-normal;
+}
+
+.upper {
+	text-transform: uppercase;
+}

@@ -1,0 +1,257 @@
+/**
+ *  Search Form in Header
+ *  ---------------------------
+ */
+
+header .search-box{
+    width: 300px;
+    position: absolute;
+    right: 15px;
+    top: 55px;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    @include media-q(phone){
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+
+    form{
+        border: 1px solid $c-yellow;
+        background-color: #425477;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 4px;
+
+        input[type="search"]{
+            border: 1px;
+            outline: 0;
+            padding: 0;
+            color: #fff;
+            font-family: $font-main;
+            font-weight: $font-weight-normal;
+            font-size: 16px;
+            width: 260px;
+            background: transparent;
+
+            &::placeholder{
+                color: #8696B7;
+                font-family: $font-main;
+                font-weight: $font-weight-normal;
+                font-size: 16px;
+            }
+
+            @include media-q(phone){
+                width: 90%;
+            }
+        }
+
+        button{
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 0;
+            cursor: pointer;
+
+            .fa-arrow-right{
+                color: $c-yellow;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/**
+ *  Newsletter Signup Form
+ *  ---------------------------
+ */
+
+.action-bar .gform_wrapper .gform_validation_errors{
+    display: none;
+}
+
+.action-bar form{
+    display: flex;
+
+    @include media-q(phone){
+        flex-direction: column;
+    }
+
+    .gform_body{
+        min-width: 411px;
+
+        @include media-q(s-tablet){
+            min-width: 264px;
+        }
+
+        input[type="text"]{
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 14px 11px;
+            line-height: 1 !important;
+            font-family: $font-main;
+            font-weight: $font-weight-normal;
+            font-size: 16px;
+
+            &::placeholder{
+                color: #AEAEAE;
+                font-family: $font-main;
+                font-weight: $font-weight-normal;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .gform_footer{
+        padding: 0 !important;
+        margin:  0 !important;
+    }
+
+    .button{
+        @include button-properties;
+        margin-bottom: 0 !important;
+        margin-left: 10px;
+        line-height: 22px !important;
+        -webkit-appearance: button;
+
+        @include media-q(phone){
+           margin-top: 10px;
+        }
+    }
+}
+
+/**
+ *  Multistep Contact us Form
+ *  ---------------------------
+ */
+
+.contact-us-form_wrapper.gform_wrapper.gravity-theme{
+    .gform_heading{
+        line-height: 26px;
+
+        > span.gform_description{
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    .gf_progressbar_wrapper{
+        margin: 20px 0 50px;
+
+        .gf_progressbar_title{
+            color: $c-brand-primary;
+            font-size: 22px;
+            font-weight: $font-weight-semi-bold;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            -webkit-text-size-adjust:100%;
+            -moz-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+        }
+    }
+
+    .gform_fields {
+        grid-column-gap: 2%;
+        grid-row-gap: 50px;
+    }
+
+   .gfield_label{
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: $c-main-content;
+        -webkit-text-size-adjust:100%;
+        -moz-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+   }
+
+   .gfield.name-field label{
+        padding: 0;
+        margin-bottom: 10px;
+        color: $c-main-content;
+   }
+
+   .gfield .gchoice{
+        display: flex;
+        margin-bottom: 7px;
+    }
+
+    .gfield_radio,
+    .gfield_checkbox{
+
+        label{
+            font-size: 16px;
+            line-height: 26px;
+            -webkit-text-size-adjust:100%;
+            -moz-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            color: $c-main-content;
+        }
+
+        .gfield-choice-input {
+            margin: 7px 10px 0 0;
+        }
+    }
+
+    input[type='text'],
+    .gfield select, textarea {
+        padding: 12px !important;
+        border: 2px solid lightgrey;
+        border-radius: 0px;
+        outline: none;
+        transition: all 300ms ease-in-out;
+        font-family: $font-main;
+        font-size: 16px;
+        line-height: 1 !important;
+        color: $c-main-content;
+
+        &:focus{
+            border-color: #0DDEFA;
+        }
+    }
+
+    .gfield{
+        .ginput_container_select{
+            position: relative;
+
+            &:after{
+                content: "\f078";
+                position: absolute;
+                right: 12px; top: 17px;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900; 
+            }
+        }
+
+        select{
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            background-color: $c-white;
+            color: $c-main-content;
+            line-height: 22px !important;
+        }
+    }
+
+    input[type='button'],
+    input[type='submit'],{
+        @include button-properties;
+        margin-bottom: 0;
+        -webkit-appearance: button;
+        padding: 10px 30px 7px !important;
+    }
+
+    input[type='button'].gform_next_button,
+    input[type='submit']{
+        float: right;
+    }
+
+    .gform_page_footer{
+        padding: 0;
+        margin-top: 50px;
+    }
+}

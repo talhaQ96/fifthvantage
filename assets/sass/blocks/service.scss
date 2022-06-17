@@ -1,0 +1,155 @@
+@import '../partials/mixins';
+
+.acf-block__services{
+
+	.services-wrapper{
+		@include flex($horizontal-align: center, $wrap: wrap);
+		margin: 0 auto;
+
+		@include media-q(s-laptop){
+			@include media-q(tablet, min){
+				width: 934px;
+			}
+		}
+
+		@include media-q(tablet){
+			@include media-q(s-tablet, min){
+				width: 698px;
+			}
+		}
+
+		> div{
+			width: 226px;
+			height: 483px;
+			overflow: hidden;
+
+			@include media-q(s-tablet, min){
+				&:not(:last-child){margin-right: 10px;}
+			}
+
+			@include media-q(s-laptop, min){
+				&:nth-child(5n){margin-right: 0;}
+				&:nth-child(n+6){margin-top: 40px;}
+			}
+
+			@include media-q(s-laptop){
+				@include media-q(tablet, min){
+					&:nth-child(4n){margin-right: 0;}
+					&:nth-child(n+5){margin-top: 40px;}
+				}
+			}
+
+			@include media-q(tablet){
+				@include media-q(s-tablet, min){
+					&:nth-child(3n){margin-right: 0;}
+					&:nth-child(n+4){margin-top: 40px;}
+				}
+			}
+
+			@include media-q(s-tablet){
+				width: 100%;
+				max-width: 450px;
+				height: 250px;
+
+				img{
+					max-height: 200px;
+				}
+
+				&:not(:last-child){margin-bottom: 40px;}
+			}
+
+			@include media-q(phone){
+				max-width: 290px;
+				height: 350px;
+			}
+		}
+
+		img, .thumbnail{
+			width: 100%;
+			height: 100%;
+		}
+
+		.slide{
+			transition: $transition;
+			background-color: $c-main-content;
+			color: $c-white;
+			height: 453px;
+			position: relative;
+			bottom: 154px;
+			right: 0; left: 0;
+			padding: 30px 20px;
+
+			h5{
+				margin-bottom: 15px;
+				font-weight: $font-weight-normal;
+			}
+
+			p{
+				transition: $transition;
+				opacity: 0;
+			}
+
+			.arrow-wrap{
+				margin-top: 15px;
+			}
+
+			&:after{
+      			content: "";
+      			position: absolute;
+      			left: 0; top: -30px;
+      			width: 100%; height: 0;
+      			border-top:    30px solid transparent;
+      			border-left:  113px solid $c-main-content;
+      			border-right: 113px solid $c-main-content;
+			}
+
+			&:hover{
+				background-image: linear-gradient(0deg, #4E81FF 0%, #0AE3FA 100%);
+				bottom: 453px;
+
+				p{ opacity: 1; }
+			}
+
+			&:hover:after{
+      			border-left-color:  #0AE3FA;
+      			border-right-color: #0AE3FA;
+			}
+
+			@include media-q(s-tablet){
+				text-align: center;
+				height: 220px;
+				bottom: 85px;
+				padding: 25px 12px 10px;
+
+				&:after{
+					border-left-width: 225px;
+					border-right-width: 225px;
+				}
+
+				&:hover{
+					bottom: 220px;
+				}
+
+				.arrow-wrap{
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+				}
+			}
+
+			@include media-q(phone){
+				height: 320px;
+				bottom: 150px;
+
+				&:after{
+					border-left-width:  145px;
+					border-right-width: 145px;
+				}
+
+				&:hover{
+					bottom: 320px;
+				}
+			}
+		}
+	}
+}

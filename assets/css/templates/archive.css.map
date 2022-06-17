@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;GAEG;AAUH;;GAEG;AAeH;;GAEG;AC7BH,gBAAgB;EACf,UAAU,EAAE,IAAI",
+"sources": ["../../sass/partials/_variables.scss","../../sass/templates/archive.scss"],
+"names": [],
+"file": "archive.css"
+}

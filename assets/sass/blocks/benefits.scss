@@ -1,0 +1,72 @@
+@import '../partials/mixins';
+
+.acf-block__benefits{
+	padding-top: 32px;
+
+	@include media-q(s-tablet, min){
+		padding-top: 22px;
+	}
+
+	.benefits-slider:not(.slick-initialized){
+		@include media-q(s-tablet){
+			@include media-q(l-phone, min){
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+
+				.benefit:nth-child(n+3){
+					display: none;
+				}
+			}
+		}
+
+		@include media-q(l-phone){
+			.benefit:not(:first-child){
+				display: none;
+			}
+		}
+	}
+
+	.benefits-slider {
+
+		text-align: center;
+
+		.benefit{
+			&:nth-child(7):last-child{
+				grid-column-start: 2;
+			}
+
+			> div{
+				max-width: 230px;
+				margin: 0 auto;
+			}
+		}
+
+		.icon-wrapper{
+			min-height: 92px;
+	
+			img{
+				max-height: 70px;
+				margin: 0 auto;
+			}
+		}
+
+		p{ color: $c-white; }
+
+		svg{ top: calc(50% - 36px); }
+
+		.slick-slide{
+			padding: 0 10px;
+		}
+
+		@include media-q(s-tablet, min){
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			row-gap: 45px;
+			justify-items: center;		
+		}
+
+		@include media-q(s-laptop, min){
+			column-gap: 180px;
+		}
+	}
+}

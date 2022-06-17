@@ -1,0 +1,125 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.acf-block__services .services-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto; }
+@media (max-width: 1199px) and (min-width: 992px) {
+  .acf-block__services .services-wrapper {
+    width: 934px; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .acf-block__services .services-wrapper {
+    width: 698px; } }
+
+  .acf-block__services .services-wrapper > div {
+    width: 226px;
+    height: 483px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .acf-block__services .services-wrapper > div:not(:last-child) {
+        margin-right: 10px; } }
+    @media (min-width: 1200px) {
+      .acf-block__services .services-wrapper > div:nth-child(5n) {
+        margin-right: 0; }
+      .acf-block__services .services-wrapper > div:nth-child(n+6) {
+        margin-top: 40px; } }
+@media (max-width: 1199px) and (min-width: 992px) {
+  .acf-block__services .services-wrapper > div:nth-child(4n) {
+    margin-right: 0; }
+  .acf-block__services .services-wrapper > div:nth-child(n+5) {
+    margin-top: 40px; } }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .acf-block__services .services-wrapper > div:nth-child(3n) {
+    margin-right: 0; }
+  .acf-block__services .services-wrapper > div:nth-child(n+4) {
+    margin-top: 40px; } }
+
+    @media (max-width: 767px) {
+      .acf-block__services .services-wrapper > div {
+        width: 100%;
+        max-width: 450px;
+        height: 250px; }
+        .acf-block__services .services-wrapper > div img {
+          max-height: 200px; }
+        .acf-block__services .services-wrapper > div:not(:last-child) {
+          margin-bottom: 40px; } }
+    @media (max-width: 479px) {
+      .acf-block__services .services-wrapper > div {
+        max-width: 290px;
+        height: 350px; } }
+  .acf-block__services .services-wrapper img, .acf-block__services .services-wrapper .thumbnail {
+    width: 100%;
+    height: 100%; }
+  .acf-block__services .services-wrapper .slide {
+    transition: all 300ms ease-in-out;
+    background-color: #1C283F;
+    color: #FFF;
+    height: 453px;
+    position: relative;
+    bottom: 154px;
+    right: 0;
+    left: 0;
+    padding: 30px 20px; }
+    .acf-block__services .services-wrapper .slide h5 {
+      margin-bottom: 15px;
+      font-weight: normal; }
+    .acf-block__services .services-wrapper .slide p {
+      transition: all 300ms ease-in-out;
+      opacity: 0; }
+    .acf-block__services .services-wrapper .slide .arrow-wrap {
+      margin-top: 15px; }
+    .acf-block__services .services-wrapper .slide:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -30px;
+      width: 100%;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-left: 113px solid #1C283F;
+      border-right: 113px solid #1C283F; }
+    .acf-block__services .services-wrapper .slide:hover {
+      background-image: linear-gradient(0deg, #4E81FF 0%, #0AE3FA 100%);
+      bottom: 453px; }
+      .acf-block__services .services-wrapper .slide:hover p {
+        opacity: 1; }
+    .acf-block__services .services-wrapper .slide:hover:after {
+      border-left-color: #0AE3FA;
+      border-right-color: #0AE3FA; }
+    @media (max-width: 767px) {
+      .acf-block__services .services-wrapper .slide {
+        text-align: center;
+        height: 220px;
+        bottom: 85px;
+        padding: 25px 12px 10px; }
+        .acf-block__services .services-wrapper .slide:after {
+          border-left-width: 225px;
+          border-right-width: 225px; }
+        .acf-block__services .services-wrapper .slide:hover {
+          bottom: 220px; }
+        .acf-block__services .services-wrapper .slide .arrow-wrap {
+          position: absolute;
+          bottom: 5px;
+          right: 10px; } }
+    @media (max-width: 479px) {
+      .acf-block__services .services-wrapper .slide {
+        height: 320px;
+        bottom: 150px; }
+        .acf-block__services .services-wrapper .slide:after {
+          border-left-width: 145px;
+          border-right-width: 145px; }
+        .acf-block__services .services-wrapper .slide:hover {
+          bottom: 320px; } }
+
+/*# sourceMappingURL=service.css.map */

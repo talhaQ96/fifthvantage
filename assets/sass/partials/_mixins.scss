@@ -1,0 +1,103 @@
+@import "variables";
+
+@mixin background-properties(){
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin ul-properties(){
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin button-properties(){
+	font-weight: $font-weight-medium;
+	font-family: $font-alt;
+	font-size:   map-get($font-size-map, sm);
+	line-height: 22px;
+	background-color: $c-yellow;
+	color: $c-main-content;
+	border-radius: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 13px 34px 10px;
+	cursor: pointer;
+	display: inline-block;
+	transition: $transition;
+	outline: none;
+	border: none;
+
+	&:hover{
+		background-color: #0DDEFA;
+	}
+}
+
+@mixin flex($vertical-align: stretch, $horizontal-align: flex-start, $wrap: wrap){
+	display: flex;
+	align-items: $vertical-align;
+	justify-content: $horizontal-align;
+	flex-wrap: $wrap;
+}
+
+@mixin input-field{
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 10px 20px;
+	outline: none;
+	font-family: $font-main;
+	font-size: map-get($font-size-map, md);
+	font-weight: $font-weight-x-light;
+
+	&::placeholder{
+		font-size: map-get($font-size-map, sm);
+		line-height: 26px;
+		font-family: $font-main;
+	}
+}
+
+$breakpoints: (
+	"desktop":  1440px,
+	"l-laptop": 1366px,
+	"laptop":	1280px,
+	"s-laptop": 1200px,
+	"l-tablet": 1024px,
+	"tablet":    992px,
+	"s-tablet":  768px, 
+	"l-phone":   576px,
+	"phone"  :   480px,
+	"s-phone":   375px
+);
+
+@mixin media-q($width, $type: max){
+	@if map_has_key($breakpoints, $width){
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+				$width: $width - 1px;
+				@media (max-width: $width){
+					@content;
+				}
+		}
+
+		@else{
+			@media (min-width: $width){
+				@content;
+			}
+		}
+	}
+
+	@else{
+		@if $type == max {
+				@media (max-width: $width){
+					@content;
+				}
+		}
+
+		@else{
+			@media (min-width: $width){
+				@content;
+			}
+		}
+	}
+}

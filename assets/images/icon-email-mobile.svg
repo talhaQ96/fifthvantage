@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="icon_email_mobile" data-name="icon email mobile" transform="translate(-350 -32)">
+    <rect id="Rectangle_167" data-name="Rectangle 167" width="45" height="45" rx="3" transform="translate(350 32)" fill="#4e83ff"/>
+    <g id="icon_email" data-name="icon email" transform="translate(360.949 47.043)">
+      <g id="Group_125" data-name="Group 125" transform="translate(15.219 2.91)">
+        <g id="Group_124" data-name="Group 124">
+          <path id="Path_632" data-name="Path 632" d="M339.392,150l7.74,4.893V144.9Z" transform="translate(-339.392 -144.896)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_127" data-name="Group 127" transform="translate(0 2.91)">
+        <g id="Group_126" data-name="Group 126">
+          <path id="Path_633" data-name="Path 633" d="M0,144.9v9.993L7.74,150Z" transform="translate(0 -144.896)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_129" data-name="Group 129" transform="translate(0.043 0)">
+        <g id="Group_128" data-name="Group 128">
+          <path id="Path_634" data-name="Path 634" d="M22.441,80H2.352A1.417,1.417,0,0,0,.96,81.221L12.4,88.756l11.437-7.535A1.417,1.417,0,0,0,22.441,80Z" transform="translate(-0.96 -80)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_131" data-name="Group 131" transform="translate(0.046 8.875)">
+        <g id="Group_130" data-name="Group 130">
+          <path id="Path_635" data-name="Path 635" d="M14.883,277.921l-2.03,1.337a.72.72,0,0,1-.789,0l-2.03-1.339-9.009,5.7a1.415,1.415,0,0,0,1.389,1.211H22.5a1.415,1.415,0,0,0,1.389-1.211Z" transform="translate(-1.024 -277.92)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
